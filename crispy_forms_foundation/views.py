@@ -32,15 +32,15 @@ class FoundationSampleForm(forms.Form):
             foundation_layout.Fieldset(
                 ugettext('Columned in a row'),
                 foundation_layout.Row(
-                    foundation_layout.Column('first_name', css_class='six'),
-                    foundation_layout.Column('last_name', css_class='six'),
+                    foundation_layout.Column('first_name', css_class='small-6'),
+                    foundation_layout.Column('last_name', css_class='small-6'),
                 ),
             ),
             foundation_layout.Fieldset(
                 ugettext('Columned in fluid row'),
                 foundation_layout.RowFluid(
-                    foundation_layout.Column('template', css_class='six'),
-                    foundation_layout.Column('order', css_class='six'),
+                    foundation_layout.Column('template', css_class='small-6'),
+                    foundation_layout.Column('order', css_class='small-6'),
                 ),
             ),
             foundation_layout.ButtonHolder(

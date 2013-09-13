@@ -72,17 +72,17 @@ Import **crispy-forms-foundation** then you can use the layout object in your fo
                 Fieldset(
                     ugettext('Display settings'),
                     RowFluid(
-                        Column('template', css_class='six'),
-                        Column('order', css_class='three'),
-                        Column('visible', css_class='three'),
+                        Column('template', css_class='small-6'),
+                        Column('order', css_class='small-3'),
+                        Column('visible', css_class='small-3'),
                     ),
                 ),
                 Fieldset(
                     ugettext('Publish settings'),
                     'parent',
                     RowFluid(
-                        Column(SplitDateTimeField('published'), css_class='six'),
-                        Column('slug', css_class='six'),
+                        Column(SplitDateTimeField('published'), css_class='small-6'),
+                        Column('slug', css_class='small-6'),
                     ),
                 ),
                 ButtonHolder(
@@ -98,7 +98,7 @@ The embedded templates are in ``crispy_forms_foundation/templates/foundation``.
 Layout items
 ************
 
-For now there is only three layout items dedicated to Foundation (Row, RowFluid, Column), other embedded items are cloned from the **uni_form** layout items from `django-crispy-forms`_.
+For now there are only two layout items dedicated to Foundation (Row and Column), other embedded items are cloned from the **uni_form** layout items from `django-crispy-forms`_.
 
 Row
 ---
@@ -108,25 +108,10 @@ Act as a div container row, it will embed his items in a div like this : ::
     <div class"row">Your stuff</div>
 
 
-RowFluid
---------
-
-It has a same behaviour than `Row`_ but add a CSS class "row-fluid" that you can use to have top level row that take all the container width. You have to put the CSS for this class to your CSS stylesheet. It will embed his items in a div like this : ::
-
-    <div class"row row-fluid">Your stuff</div>
-
-The CSS to add should be something like this : ::
-
-    .row-fluid {
-        width: 100%;
-        max-width: 100%;
-        min-width: 100%;
-    }
-
 Column
 ------
 
-This is the column from the `Foundation Grid`_, all columns should be contained in a `Row`_ or a `RowFluid`_ and you will have to define the column type in the ``css_class`` attribute.
+This is the column from the `Foundation Grid`_, all columns should be contained in a `Row`_ and you will have to define the column type in the ``css_class`` attribute.
 
 With a ``css_class`` attribute defined to ``twelve``, it will embed his items in a div like this : ::
 

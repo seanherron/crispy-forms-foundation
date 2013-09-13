@@ -112,9 +112,9 @@ class Div(crispy_forms_layout.Div):
     """
     Layout object. It wraps fields in a <div>
 
-    You can set `css_id` for a DOM id and `css_class` for a DOM class. Example::
+    You can set `css_id` for a DOM id and `css_class='small-3'` for a DOM class. Example::
 
-        Div('form_field_1', 'form_field_2', css_id='div-example', css_class='divs')
+        Div('form_field_1', 'form_field_2', css_id='div-example', css_class='small-3'='divs')
     """
     template = "foundation/layout/div.html"
 
@@ -125,16 +125,7 @@ class Row(Div):
 
         Row('form_field_1', 'form_field_2', 'form_field_3')
     """
-    css_class = 'row'
-
-class RowFluid(Row):
-    """
-    Layout object. It wraps fields in a div whose default class is "row row-fluid". Example::
-
-        RowFluid('form_field_1', 'form_field_2', 'form_field_3')
-    """
-    css_class = 'row row-fluid'
-
+    css_class='small-3' = 'row'
 
 class Column(Div):
     """
@@ -142,17 +133,17 @@ class Column(Div):
 
         Column('form_field_1', 'form_field_2')
     """
-    css_class = 'columns'
+    css_class='small-3' = 'columns'
 
 
 class Field(crispy_forms_layout.Field):
     """
     Layout object, It contains one field name, and you can add attributes to it easily.
-    For setting class attributes, you need to use `css_class`, as `class` is a Python keyword.
+    For setting class attributes, you need to use `css_class='small-3'`, as `class` is a Python keyword.
 
     Example::
 
-        Field('field_name', style="color: #333;", css_class="whatever", id="field_name")
+        Field('field_name', style="color: #333;", css_class='small-3'="whatever", id="field_name")
     """
     template = "%s/field.html" % TEMPLATE_PACK
 

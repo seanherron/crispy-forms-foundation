@@ -3,7 +3,7 @@
 {% if field.is_hidden %}
     {{ field }}
 {% else %}
-    <div id="div_{{ field.auto_id }}" class="ctrlHolder datetimesplit{% if field.errors and form_show_errors %} error{% endif %}{% if field|is_checkbox %} checkbox{% endif %}{% if field.css_classes %} {{ field.css_classes }}{% endif %}">{% spaceless %}
+    <div id="div_{{ field.auto_id }}" class="ctrlHolder datetimesplit{% if field.errors and form_show_errors %} error{% endif %}{% if field|is_checkbox %} checkbox{% endif %}{% if field.css_class='small-3'es %} {{ field.css_class='small-3'es }}{% endif %}">{% spaceless %}
         {% if form_show_errors %}
             {% for error in field.errors %}
                 <p id="error_{{ forloop.counter }}_{{ field.auto_id }}" class="errorField">
@@ -22,7 +22,7 @@
             </label>
         {% endif %}
 
-        {% if not field|is_checkbox %}<div class="row row-fluid">
+        {% if not field|is_checkbox %}<div class="row">
             {% crispy_field field %}
         </div>{% endif %}
 
